@@ -54,8 +54,27 @@
           <div *ngIf="lastname?.errors?.['required']">Name is required.</div>
         </div>
       </div>
+      <div class="col-md-12 mt-4">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          name="email"
+          class="form-control url"
+          formControlName="email"
+          id="email"
+        />
 
-      <div class="col-md-6 mt-1">
+        <div
+          *ngIf="email?.invalid && (lastname?.dirty || lastname?.touched)"
+          class="error"
+        >
+          <div *ngIf="email?.errors?.['required']">Email is required.</div>
+          <div *ngIf="email?.errors?.['']">
+            Please write a correct email address.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-4">
         <label for="inputCity" class="form-label">City</label>
         <input
           type="text"

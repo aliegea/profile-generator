@@ -40,6 +40,7 @@ export class UserFormComponent implements OnInit {
     this.userForm = this.fb.group({
       firstname: ['', [Validators.required]],
       lastname: ['', Validators.required],
+      email: ['', Validators.required, Validators.email],
       city: ['', Validators.required],
       country: ['', Validators.required],
       avatar: [''],
@@ -55,7 +56,9 @@ export class UserFormComponent implements OnInit {
   get lastname() {
     return this.userForm.get('lastname');
   }
-
+  get email() {
+    return this.userForm.get('email');
+  }
   get country() {
     return this.userForm.get('country');
   }
