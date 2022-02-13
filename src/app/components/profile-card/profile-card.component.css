@@ -164,7 +164,7 @@ span {
   margin-left: 10px;
 }
 /* custom styles for mobile & ipad devices */
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1200px) {
   .wrapper {
     display: grid;
     grid-gap: 10px;
