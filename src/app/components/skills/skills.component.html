@@ -1,0 +1,28 @@
+<div class="container">
+  <h3>Now let's add your skills</h3>
+  <form [formGroup]="skillsForm" (ngSubmit)="onFormSubmit()">
+    <div formArrayName="skills">
+      <div
+        *ngFor="let name of skills.controls; index as idx"
+        class="form-group"
+      >
+        <input
+          [formControlName]="idx"
+          placeholder="Enter a skill"
+          class="form-control"
+        />
+        <hr />
+
+        <button type="button" (click)="addNameField()" class="btn addBtn">
+          +</button
+        ><span>Add another Skill</span>
+        <button type="button" (click)="deleteNameField(idx)" class="btn delBtn">
+          -</button
+        ><span class="red">Delete Skill</span>
+      </div>
+      <div class="col-12 btnDiv">
+        <button type="submit" class="btn button">Save skills</button>
+      </div>
+    </div>
+  </form>
+</div>

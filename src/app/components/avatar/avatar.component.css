@@ -1,0 +1,44 @@
+h1,
+h3 {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 1.5px;
+  background-color: #212529;
+  color: #1ba098;
+  text-align: center;
+}
+h3 {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.avatar {
+  justify-content: center;
+  display: flex;
+}
+.avatar img {
+  border-radius: 50%;
+  max-width: 150px;
+  min-width: 150px;
+  max-height: 150px;
+  min-height: 150px;
+  border: 6px solid #1ba098;
+  background-color: white;
+}
+.img {
+  display: flex;
+  align-items: center;
+}
+input {
+  margin-top: 1rem;
+  min-height: 50px;
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  font-weight: 200;
+  border-radius: 10px;
+  border: 1px solid #1ba098;
+}
+input:focus {
+  border-color: #1ba098;
+  box-shadow: 0 0 8px 0 #1ba098;
+}

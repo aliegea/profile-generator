@@ -1,0 +1,17 @@
+<h3>Create an avatar</h3>
+<div class="row">
+  <div class="col-md-6 img">
+    <input
+      [(ngModel)]="avatar"
+      placeholder="Enter an Image url"
+      class="form-control"
+    />
+    <hr />
+  </div>
+
+  <div class="col-md-6 avatar">
+    <!-- <img src="https://avatar.oxro.io/avatar.svg?name=Ali" /> -->
+
+    <img src="{{ avatar }}" />
+  </div>
+</div>

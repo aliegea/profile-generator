@@ -1,0 +1,182 @@
+<!-- <video src="./assets/video/space.mp4" autoplay loop playsinline muted></video> -->
+
+<div class="container-fluid main">
+  <div class="container pt-4">
+    <header>
+      <div class="row">
+        <div class="col-sm-4">contact</div>
+        <div class="col-sm-4 avatar">
+          <!-- <img src="https://avatar.oxro.io/avatar.svg?name=Ali" /> -->
+
+          <img src="../assets/images/avatar.png" />
+        </div>
+        <div class="col-sm-4">social media icons</div>
+      </div>
+      <h1>Welcome to your profile generator</h1>
+      <h3>Create your profesional profile in just a few minuts...</h3>
+    </header>
+  </div>
+  <div class="container">
+    <form
+      class="row g-3"
+      [formGroup]="userForm"
+      (ngSubmit)="onSubmit()"
+      novalidate
+    >
+      <div class="col-md-6 mt">
+        <label for="firstname" class="form-label">First name</label>
+        <input
+          type="text"
+          class="form-control url"
+          name="firstname"
+          formControlName="firstname"
+          id="firstname"
+        />
+
+        <div
+          *ngIf="firstname?.invalid && (firstname?.dirty || firstname?.touched)"
+          class="error"
+        >
+          <div *ngIf="firstname?.errors?.['required']">Name is required.</div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <label for="lastname" class="form-label">Lastname/s</label>
+        <input
+          type="text"
+          name="lastname"
+          class="form-control url"
+          formControlName="lastname"
+          id="lastname"
+        />
+
+        <div
+          *ngIf="lastname?.invalid && (lastname?.dirty || lastname?.touched)"
+          class="error"
+        >
+          <div *ngIf="lastname?.errors?.['required']">Name is required.</div>
+        </div>
+      </div>
+
+      <div class="col-md-6 mt-1">
+        <label for="inputCity" class="form-label">City</label>
+        <input
+          type="text"
+          class="form-control url"
+          id="inputCity"
+          formControlName="city"
+          id="city"
+        />
+
+        <div
+          *ngIf="city?.invalid && (city?.dirty || city?.touched)"
+          class="error"
+        >
+          <div *ngIf="city?.errors?.['required']">Name is required.</div>
+        </div>
+      </div>
+
+      <div class="col-md-6 mt-1">
+        <label for="inputState" class="form-label">Country</label>
+        <select
+          id="inputState"
+          class="form-select"
+          formControlName="country"
+          id="country"
+        >
+          <option
+            *ngFor="let country of countries; let i = index"
+            value="{{ i }}"
+          >
+            {{ country.CountryName }}
+          </option>
+        </select>
+        <div
+          *ngIf="country?.invalid && (country?.dirty || country?.touched)"
+          class="error"
+        >
+          <div *ngIf="country?.errors?.['required']">Name is required.</div>
+        </div>
+      </div>
+
+      <div class="col-md-12 mt-5">
+        <div class="md-form">
+          <label for="description">Description</label>
+          <textarea
+            class="md-textarea form-control"
+            rows="3"
+            placeholder="Tell us something about you..."
+            formControlName="description"
+            id="description"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="col-md-12 block">
+        <h3>Create an avatar</h3>
+        <div class="row">
+          <div class="col-md-6 img">
+            <input
+              [(ngModel)]="avatar"
+              placeholder="Enter an Image url"
+              class="form-control url"
+              formControlName="avatar"
+            />
+            <hr />
+          </div>
+
+          <div class="col-md-6 avatar">
+            <!-- <img src="https://avatar.oxro.io/avatar.svg?name=Ali" /> -->
+
+            <img src="{{ avatar }}" />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 block">
+        <h3>Select your main field of expertise</h3>
+      </div>
+      <div class="col-md-6 mt-5">
+        <label hidden for="field" class="form-label">Field</label>
+        <select id="field" class="form-select" formControlName="field">
+          <option disabled>Select your main field</option>
+          <option>Front End</option>
+          <option>Back End</option>
+          <option>Mobile</option>
+          <option>Data</option>
+        </select>
+        <div
+          *ngIf="field?.invalid && (field?.dirty || field?.touched)"
+          class="error"
+        >
+          <div *ngIf="field?.errors?.['required']">Field is required.</div>
+        </div>
+        <hr />
+      </div>
+      <div class="col-md-6 mt-5">
+        <label hidden for="experience" class="form-label"
+          >Expierience in years</label
+        >
+
+        <input
+          type="number"
+          placeholder="Experience in years"
+          id="experience"
+          formControlName="experience"
+          class="form-control url"
+        />
+      </div>
+      <div class="container block">
+        <app-skills></app-skills>
+      </div>
+
+      <div class="col-12 btnDiv">
+        <button type="submit" class="button" [disabled]="userForm.invalid">
+          Finish and check my profile
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
