@@ -9,9 +9,12 @@ import { TagInputModule } from 'ngx-chips';
 import { SkillsComponent } from './components/skills/skills.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserFormComponent } from './components/user-form/user-form.component';
+import { ProfileCardComponent } from './components/profile-card/profile-card.component';
+import { SkillComponent } from './components/skill/skill.component';
 
 @NgModule({
-  declarations: [AppComponent, SkillsComponent, AvatarComponent],
+  declarations: [AppComponent, SkillsComponent, AvatarComponent, UserFormComponent, ProfileCardComponent, SkillComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,0 +1,32 @@
+<div class="main">
+  <header>
+    <div class="row">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4 avatar">
+        <!-- <img src="https://avatar.oxro.io/avatar.svg?name=Ali" /> -->
+
+        <img src="{{ userData.avatar }}" />
+      </div>
+      <div class="col-sm-4"></div>
+    </div>
+    <h1>Hi! I'm {{ userData.firstname }} {{ userData.lastname }}</h1>
+    <h2>
+      I'm a {{ userData.field }} developer from {{ userData.city }},
+      {{ userData.country }} .
+    </h2>
+  </header>
+
+  <div class="content center row">
+    <div class="card">
+      *ngfor=""
+      <h2>Skills</h2>
+      <hr />
+      <div class="wrapper">
+        <app-skill
+          [skill]="skill"
+          *ngFor="let skill of userData.skills"
+        ></app-skill>
+      </div>
+    </div>
+  </div>
+</div>

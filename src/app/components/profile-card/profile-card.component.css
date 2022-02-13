@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 1.5px;
+
+  color: #deb992;
+}
+.main {
+  background-color: #212529;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+h1,
+h2 {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 1.5px;
+  background-color: #212529;
+  color: #1ba098;
+  text-align: center;
+}
+h2 {
+  font-size: 3rem;
+  margin-top: 3rem;
+}
+
+.center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding-bottom: 50px;
+}
+.card {
+  background-color: #212529;
+  border: 1px solid #f4e48c;
+  width: 40%;
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 50px;
+
+  /* custom */
+}
+
+.card h2 {
+  margin: 0px;
+  padding: 0px 0px 15px 0px;
+  text-align: right;
+  font-size: 30px;
+  color: #f4e48c;
+}
+
+.card hr {
+  display: block;
+  border: none;
+  height: 3px;
+  background-color: #f4e48c;
+  margin: 0px;
+}
+.card p {
+  color: white;
+  padding: 5px;
+  margin: 2px;
+  border: 1px solid #007bff;
+}
+.wrapper {
+  margin: 0;
+  min-height: 340px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 24% 24% 24% 24%;
+  grid-template-rows: 50% 50%;
+  padding: 10px;
+}
+
+.avatar {
+  justify-content: center;
+  display: flex;
+}
+.avatar img {
+  border-radius: 50%;
+  max-width: 150px;
+  min-width: 150px;
+  max-height: 150px;
+  min-height: 150px;
+  border: 6px solid #1ba098;
+  background-color: white;
+}
+.img {
+  display: flex;
+  align-items: center;
+}
