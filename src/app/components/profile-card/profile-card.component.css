@@ -13,8 +13,8 @@ body {
   background-color: #212529;
   width: 100%;
   min-height: 100vh;
-  margin: 0;
-  padding: 0;
+
+  padding: 40px;
   overflow: hidden;
 }
 
@@ -31,40 +31,38 @@ h2 {
   font-size: 3rem;
   margin-top: 3rem;
 }
+h3 {
+  color: darkgrey;
+  opacity: 0.6;
+  margin-top: 10px;
+}
 
-.center {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-top: 20px;
-  padding-bottom: 50px;
+.nameTitle {
+  padding-left: 30px;
 }
 .card {
   background-color: #212529;
-  border: 1px solid #f4e48c;
-  width: 40%;
-  margin: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  width: 80%;
+  justify-self: flex-end;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   padding: 20px;
-  margin-top: 50px;
-
-  /* custom */
+  margin: 20px;
+  padding-bottom: 40px;
+  overflow: scroll;
+  min-height: 200px;
+}
+.cardRight {
+  justify-self: flex-start;
+}
+.field {
+  align-self: flex-start;
 }
 
 .card h2 {
   margin: 0px;
   padding: 0px 0px 15px 0px;
-  text-align: right;
-  font-size: 30px;
+  text-align: left;
+  font-size: 40px;
   color: #f4e48c;
 }
 
@@ -77,34 +75,129 @@ h2 {
 }
 .card p {
   color: white;
+  opacity: 0.6;
   padding: 5px;
   margin: 2px;
-  border: 1px solid #007bff;
+  font-size: 1.3rem;
 }
+.experience {
+  font-size: 6rem;
+  color: darkgrey;
+  opacity: 0.6;
+  margin-left: -5px;
+  font-style: italic;
+}
+.n {
+  font-size: 6rem;
+  color: darkgrey;
+  opacity: 0.5;
+  margin-left: 30px;
+  margin-right: -10px;
+}
+
 .wrapper {
-  margin: 0;
-  min-height: 340px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  background-color: #212529;
+  color: #444;
+  align-items: center;
+}
+.userName {
+  text-align: left;
+  font-size: 5rem;
+  font-weight: 600;
+  margin-top: 5px;
+}
+.userField {
+  text-align: left;
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  min-height: 200px;
+}
+
+.skillsWrapper {
+  margin-top: 10px;
+  min-height: 90px;
   display: grid;
   grid-gap: 5px;
   grid-template-columns: 24% 24% 24% 24%;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 1fr;
   padding: 10px;
 }
 
 .avatar {
-  justify-content: center;
+  justify-content: flex-end;
   display: flex;
+  margin-right: 30px;
 }
 .avatar img {
   border-radius: 50%;
   max-width: 150px;
-  min-width: 150px;
-  max-height: 150px;
-  min-height: 150px;
+  min-width: 200px;
+  max-height: 200px;
+  min-height: 200px;
   border: 6px solid #1ba098;
   background-color: white;
 }
 .img {
   display: flex;
   align-items: center;
+}
+.back {
+  max-width: 80px;
+  max-height: 80px;
+  min-width: 80px;
+  min-height: 80px;
+}
+span {
+  color: #1ba098;
+  font-size: large;
+  margin-left: 10px;
+}
+/* custom styles for mobile & ipad devices */
+@media screen and (max-width: 1600px) {
+  .wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background-color: #212529;
+    color: #444;
+    align-items: center;
+  }
+  .card,
+  .cardRight {
+    justify-self: center;
+    min-width: 90%;
+    min-height: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  .nameTitle {
+    padding: 10px;
+    font-size: 3rem;
+  }
+  .avatar {
+    justify-content: center;
+    display: flex;
+    margin-right: 0px;
+  }
+  .main {
+    padding: 5px;
+  }
+  .userName {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-top: 5px;
+  }
 }

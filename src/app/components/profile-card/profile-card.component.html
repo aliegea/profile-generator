@@ -1,27 +1,48 @@
 <div class="main">
   <header>
     <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4 avatar">
-        <!-- <img src="https://avatar.oxro.io/avatar.svg?name=Ali" /> -->
-
-        <img src="{{ userData.avatar }}" />
+      <div class="col-sm-4">
+        <button class="btn" (click)="goBack()">
+          <img src="../assets/images/icon-back.png" /><span>BACK</span>
+        </button>
       </div>
-      <div class="col-sm-4"></div>
     </div>
-    <h1>Hi! I'm {{ userData.firstname }} {{ userData.lastname }}</h1>
-    <h2>
-      I'm a {{ userData.field }} developer from {{ userData.city }},
-      {{ userData.country }} .
-    </h2>
   </header>
 
-  <div class="content center row">
-    <div class="card">
-      *ngfor=""
+  <div class="wrapper">
+    <div class="">
+      <div class="avatar">
+        <img src="{{ userData.avatar }}" />
+      </div>
+    </div>
+
+    <div class="nameTitle">
+      <h2 class="userField">{{ userData.field | uppercase }} DEVELOPER</h2>
+      <h1 class="userName">{{ userData.firstname }} {{ userData.lastname }}</h1>
+    </div>
+
+    <div class="card field">
+      <h2>Description</h2>
+      <hr />
+
+      <p>{{ userData.description }}</p>
+    </div>
+
+    <div class="card cardRight field">
+      <h2>Field</h2>
+      <hr />
+
+      <h3>{{ userData.field | uppercase }}</h3>
+      <span class="n"
+        >{{ userData.experience }}<span class="experience">y</span>
+      </span>
+    </div>
+    <div class="card"></div>
+
+    <div class="card cardRight skills">
       <h2>Skills</h2>
       <hr />
-      <div class="wrapper">
+      <div class="skillsWrapper">
         <app-skill
           [skill]="skill"
           *ngFor="let skill of userData.skills"

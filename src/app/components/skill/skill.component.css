@@ -2,8 +2,8 @@
   position: Absolute;
   top: 0;
   margin: 0;
-  font-size: 18px;
-  color: white;
+  font-size: 1.8rem;
+  color: rgb(172, 157, 157);
   left: 50%;
   transform: translateX(-50%);
   letter-spacing: 2px;
@@ -17,4 +17,10 @@
   font-size: 150%;
   margin: 0;
   position: relative;
+}
+/* custom styles for mobile & ipad devices */
+@media screen and (max-width: 1600px) {
+  .skillName {
+    font-size: 1.3rem;
+  }
 }

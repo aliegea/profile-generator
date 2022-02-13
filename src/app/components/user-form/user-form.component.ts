@@ -43,7 +43,7 @@ export class UserFormComponent implements OnInit {
       city: ['', Validators.required],
       country: ['', Validators.required],
       avatar: [''],
-      description: [''],
+      description: ['', Validators.maxLength(200)],
       field: ['', Validators.required],
       experience: ['', Validators.required],
     });
@@ -72,6 +72,9 @@ export class UserFormComponent implements OnInit {
   }
   get experience() {
     return this.userForm.get('experience');
+  }
+  get description() {
+    return this.userForm.get('description');
   }
 
   onSubmit() {

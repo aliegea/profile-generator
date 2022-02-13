@@ -20,4 +20,7 @@ export class ProfileCardComponent implements OnInit {
       this.profileService.getSessionUserData('userData') || ''
     );
   }
+  goBack(): void {
+    this.router.navigate(['/userForm']);
+  }
 }
