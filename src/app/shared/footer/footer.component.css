@@ -1,0 +1,12 @@
+footer {
+  color: white;
+  padding: 5px;
+  min-width: 100%;
+  text-align: center;
+  background-color: #1ba098;
+  font-size: 1.3rem;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}

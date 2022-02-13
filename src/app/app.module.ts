@@ -12,9 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { ProfileCardComponent } from './components/profile-card/profile-card.component';
 import { SkillComponent } from './components/skill/skill.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, SkillsComponent, AvatarComponent, UserFormComponent, ProfileCardComponent, SkillComponent],
+  declarations: [AppComponent, SkillsComponent, AvatarComponent, UserFormComponent, ProfileCardComponent, SkillComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
